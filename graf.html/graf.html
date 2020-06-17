@@ -1,0 +1,312 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+
+<script type="text/javascript">
+
+var colors = ['#FF6F61','#95B71A','#4424D6','#FC600A','#110934','#6F51F6','#643820','#ff9287', '#92A8D1', '#EFC050', '#00477e'];
+
+Highcharts.chart('vypadeksamozivitelky', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Samoživitel/ka s dětmit'
+    },
+    xAxis: {
+        categories: ['31.3.', '15.4.', '28.4.', '12.5.', '26.5.', '9.6.']
+    },
+    credits: {
+        text: 'PAQ Research',
+        href: 'https://www.paqresearch.cz/'
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'procento dotázaných'
+        },
+        stackLabels: {
+            enabled: true,
+            style: {
+                fontWeight: 'bold',
+                color: ( // theme
+                    Highcharts.defaultOptions.title.style &&
+                    Highcharts.defaultOptions.title.style.color
+                ) || 'gray'
+            }
+        }
+    },
+    legend: {
+        align: 'right',
+        x: -30,
+        verticalAlign: 'top',
+        y: 25,
+        floating: true,
+        backgroundColor:
+            Highcharts.defaultOptions.legend.backgroundColor || 'white',
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}',
+        enabled: false
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    series: [{
+        name: 'bez výpadku příjmů',
+        data: [41.7, 32.4, 46.6, 47.1, 55.8, 53.1],
+        color: colors[4],
+        visible: false
+    }, {
+        name: 'výpadek příjmů na 0-50 %',
+        data: [28.5, 23, 15.1, 11.9, 10.1, 14.8],
+        color: colors[1],
+    }, {
+        name: 'výpadek příjmů na 51-70 %',
+        data: [12.9, 17.9, 22, 13.6, 12.7, 7.5],
+        color: colors[2],
+    }, {
+        name: 'výpadek příjmů na 71-99 %',
+        data: [16.8, 26.7, 16.3, 27.4, 21.4, 24.6],
+        color: colors[3],
+    }]
+});
+
+
+Highcharts.chart('vypadekdeti', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Úplná domácnost s dětmi'
+    },
+    xAxis: {
+        categories: ['31.3.', '15.4.', '28.4.', '12.5.', '26.5.', '9.6.']
+    },
+    credits: {
+        text: 'PAQ Research',
+        href: 'https://www.paqresearch.cz/'
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'procento dotázaných'
+        },
+        stackLabels: {
+            enabled: true,
+            style: {
+                fontWeight: 'bold',
+                color: ( // theme
+                    Highcharts.defaultOptions.title.style &&
+                    Highcharts.defaultOptions.title.style.color
+                ) || 'gray'
+            }
+        }
+    },
+    legend: {
+        align: 'right',
+        x: -30,
+        verticalAlign: 'top',
+        y: 25,
+        floating: true,
+        backgroundColor:
+            Highcharts.defaultOptions.legend.backgroundColor || 'white',
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}',
+        enabled: false
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+
+    series: [{
+        name: 'výpadek příjmů na 0-50 %',
+        data: [17.8, 16, 9.7, 8.5, 7.1, 7],
+        color: colors[1],
+    }, {
+        name: 'výpadek příjmů na 51-70 %',
+        data: [15.8, 16.3, 13.4, 12.9, 12.8, 13],
+        color: colors[2],
+    }, {
+        name: 'výpadek příjmů na 71-99 %',
+        data: [23.8, 30.5, 33.8, 36.6, 37.8, 38.4],
+        color: colors[3],
+    }, {
+        name: 'bez výpadku příjmů',
+        data: [42.6, 37.2, 43.1, 42, 41.3, 41.6],
+        color: colors[4],
+        visible: false
+    }]
+});
+
+
+Highcharts.chart('vypadeksam', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Samostatně žijící dospělý'
+    },
+    xAxis: {
+        categories: ['31.3.', '15.4.', '28.4.', '12.5.', '26.5.', '9.6.']
+    },
+    credits: {
+        text: 'PAQ Research',
+        href: 'https://www.paqresearch.cz/'
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'procento dotázaných'
+        },
+        stackLabels: {
+            enabled: true,
+            style: {
+                fontWeight: 'bold',
+                color: ( // theme
+                    Highcharts.defaultOptions.title.style &&
+                    Highcharts.defaultOptions.title.style.color
+                ) || 'gray'
+            }
+        }
+    },
+    legend: {
+        align: 'right',
+        x: -30,
+        verticalAlign: 'top',
+        y: 25,
+        floating: true,
+        backgroundColor:
+            Highcharts.defaultOptions.legend.backgroundColor || 'white',
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}',
+        enabled: false
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+
+    series: [{
+        name: 'výpadek příjmů na 0-50 %',
+        data: [22.3, 16.1, 14, 15.5, 11.9, 13],
+        color: colors[1],
+    }, {
+        name: 'výpadek příjmů na 51-70 %',
+        data: [13.2, 11.2, 10, 13.7, 13.8, 9.4],
+        color: colors[2],
+    }, {
+        name: 'výpadek příjmů na 71-99 %',
+        data: [20.6, 33.7, 17.4, 30.2, 24.8, 28.8],
+        color: colors[3],
+    }, {
+        name: 'bez výpadku příjmů',
+        data: [43.9, 38.9, 58.5, 40.7, 49.5, 48.8],
+        color: colors[4],
+        visible: false
+    }]
+});
+
+
+Highcharts.chart('vypadekbezdeti', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Dospělí bez dětí'
+    },
+    xAxis: {
+        categories: ['31.3.', '15.4.', '28.4.', '12.5.', '26.5.', '9.6.']
+    },
+    credits: {
+        text: 'PAQ Research',
+        href: 'https://www.paqresearch.cz/'
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'procento dotázaných'
+        },
+        stackLabels: {
+            enabled: true,
+            style: {
+                fontWeight: 'bold',
+                color: ( // theme
+                    Highcharts.defaultOptions.title.style &&
+                    Highcharts.defaultOptions.title.style.color
+                ) || 'gray'
+            }
+        }
+    },
+    legend: {
+        align: 'right',
+        x: -30,
+        verticalAlign: 'top',
+        y: 25,
+        floating: true,
+        backgroundColor:
+            Highcharts.defaultOptions.legend.backgroundColor || 'white',
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}',
+        enabled: false
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+
+    series: [{
+        name: 'výpadek příjmů na 0-50 %',
+        data: [16, 18.9, 11.6, 9.1, 8.7, 8.5],
+        color: colors[1],
+    }, {
+        name: 'výpadek příjmů na 51-70 %',
+        data: [15.2, 18.2, 14.7, 13.8, 14.6, 14.2],
+        color: colors[2],
+    }, {
+        name: 'výpadek příjmů na 71-99 %',
+        data: [25.3, 26.3, 28, 28.4, 33, 27.9],
+        color: colors[3],
+    }, {
+        name: 'bez výpadku příjmů',
+        data: [43.6, 36.6, 45.7, 48.8, 43.7, 49.4],
+        color: colors[4],
+        visible: false,
+    }]
+});
